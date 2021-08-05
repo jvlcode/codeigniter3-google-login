@@ -49,10 +49,10 @@
 
 		public function google_login(){
 			$client = new GoogleClient();
-			$client->setApplicationName('JVLcode Google Login');
-			$client->setClientId('416748681329-e2t800u2qshvgvo0c6bteo69mtvat1rp.apps.googleusercontent.com');
-			$client->setClientSecret('zAHNyYKFq-cjTkXEkYzsHby9');
-			$client->setRedirectUri('http://localhost/codeigniter3/home/google_login');
+			$client->setApplicationName('Your Application name');
+			$client->setClientId('Your Client ID');
+			$client->setClientSecret('Your Client Secret');
+			$client->setRedirectUri('http://localhost/yourproject/home/google_login');
 			$client->addScope(['https://www.googleapis.com/auth/userinfo.email','https://www.googleapis.com/auth/userinfo.profile']);
 			if($code = $this->input->get('code')){
 				$token = $client->fetchAccessTokenWithAuthCode($code);
